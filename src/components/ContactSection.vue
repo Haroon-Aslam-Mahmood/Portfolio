@@ -1,13 +1,8 @@
 <script setup>
 import { contacts } from '@/data/content'
-import { useToast } from '@/composables/useToast'
+import { useResumeDownload } from '@/composables/useResumeDownload'
 
-const { showToast } = useToast()
-
-const downloadResume = (event) => {
-  event.preventDefault()
-  showToast('Resume downloading started...')
-}
+const { downloadResume } = useResumeDownload()
 </script>
 
 <template>
@@ -32,7 +27,7 @@ const downloadResume = (event) => {
         </div>
       </div>
 
-      <a href="#" class="btn btn-primary" @click.prevent="downloadResume">
+      <a href="/HaroonAslam_Resume.pdf" class="btn btn-primary" @click.prevent="downloadResume">
         <i class="fas fa-download"></i> Download Resume
       </a>
     </div>

@@ -2,15 +2,10 @@
 import { onMounted } from 'vue'
 import { socialLinks } from '@/data/content'
 import { useTypewriter } from '@/composables/useTypewriter'
-import { useToast } from '@/composables/useToast'
+import { useResumeDownload } from '@/composables/useResumeDownload'
 
 const { displayText, start } = useTypewriter('Full Stack Developer')
-const { showToast } = useToast()
-
-const downloadResume = (event) => {
-  event.preventDefault()
-  showToast('Resume downloading started...')
-}
+const { downloadResume } = useResumeDownload()
 
 onMounted(() => {
   start()
@@ -52,7 +47,7 @@ onMounted(() => {
       </div>
 
       <div class="cta-buttons">
-        <a href="#" class="btn btn-primary" @click.prevent="downloadResume">
+        <a href="/HaroonAslam_Resume.pdf" class="btn btn-primary" @click.prevent="downloadResume">
           <i class="fas fa-download"></i> Download Resume
         </a>
         <a href="#contact" class="btn btn-outline">Contact Me</a>

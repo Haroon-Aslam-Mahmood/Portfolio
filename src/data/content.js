@@ -15,9 +15,9 @@ export const socialLinks = [
 ]
 
 export const aboutParagraphs = [
-  'I am a Full Stack Developer with a Bachelors degree in Computer Science from FAST (NUCES), Islamabad, and approximately one year of hands-on experience in the IT industry.',
-  'I have worked on multiple full stack projects using modern frameworks and tools, primarily focusing on the MERN stack. Alongside web development, I also have experience with cloud services, containerization, and cross-platform mobile development.',
-  'I enjoy solving real-world problems and continuously improving my technical skill set to build scalable, clean, and maintainable applications.',
+  'I am a Full Stack Developer with a Bachelors degree in Computer Science from FAST (NUCES), Islamabad and approximately one year of hands on experience in the IT industry.',
+  'I have worked on multiple full stack projects using modern frameworks and tools, primarily focusing on the MERN stack. Alongside web development, I also have experience with cloud services, containerization and cross platform mobile development.',
+  'I enjoy solving real world problems and continuously improving my technical skill set to build scalable, clean and maintainable applications.',
 ]
 
 export const skillCategories = [
@@ -27,7 +27,7 @@ export const skillCategories = [
   },
   {
     title: 'Additional Experience',
-    tags: ['AWS', 'Docker', 'Flutter', 'SQL', 'Python', 'Git & GitHub', 'Linux'],
+    tags: ['AWS', 'Docker', 'Flutter', 'SQL', 'Python', 'Git & GitHub', 'Linux', 'Vue.js'],
   },
 ]
 
@@ -77,6 +77,6 @@ export const contacts = [
   {
     icon: 'fas fa-map-marker-alt',
     title: 'Location',
-    value: 'Pakistan',
+    value: 'Islamabad, Pakistan',
   },
 ]
