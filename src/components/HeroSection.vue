@@ -55,3 +55,33 @@ onMounted(() => {
     </div>
   </header>
 </template>
+
+<style scoped>
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  .cta-buttons .btn {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    box-sizing: border-box;
+  }
+}
+
+/* Ensure .btn elements have no side margin or padding issues */
+.cta-buttons .btn {
+  margin: 0;
+  box-sizing: border-box;
+}
+</style>
