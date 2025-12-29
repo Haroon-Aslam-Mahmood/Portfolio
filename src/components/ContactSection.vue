@@ -1,0 +1,40 @@
+<script setup>
+import { contacts } from '@/data/content'
+import { useToast } from '@/composables/useToast'
+
+const { showToast } = useToast()
+
+const downloadResume = (event) => {
+  event.preventDefault()
+  showToast('Resume downloading started...')
+}
+</script>
+
+<template>
+  <section id="contact">
+    <div class="container contact-content fade-in-section">
+      <h2>Get In Touch</h2>
+      <p>
+        I am currently open to new opportunities. Whether you have a question or just want to say
+        hi, I'll try my best to get back to you!
+      </p>
+
+      <div class="contact-cards">
+        <div v-for="contact in contacts" :key="contact.title" class="contact-card">
+          <i :class="`${contact.icon} contact-icon`"></i>
+          <h4>{{ contact.title }}</h4>
+          <template v-if="contact.href">
+            <a :href="contact.href">{{ contact.value }}</a>
+          </template>
+          <template v-else>
+            <span>{{ contact.value }}</span>
+          </template>
+        </div>
+      </div>
+
+      <a href="#" class="btn btn-primary" @click.prevent="downloadResume">
+        <i class="fas fa-download"></i> Download Resume
+      </a>
+    </div>
+  </section>
+</template>
