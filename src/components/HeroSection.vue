@@ -17,7 +17,7 @@ onMounted(() => {
     <div class="container hero-content">
       <div class="profile-img-container">
         <img
-          src="https://picsum.photos/seed/haroon/300/300"
+          src="@/assets/images/ProfilePicture.jpg"
           alt="Haroon Aslam Mahmood"
           class="profile-img"
         />

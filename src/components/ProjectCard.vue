@@ -1,7 +1,8 @@
 <script setup>
+import { computed } from 'vue'
 import { useToast } from '@/composables/useToast'
 
-defineProps({
+const props = defineProps({
   project: {
     type: Object,
     required: true,
@@ -11,18 +12,24 @@ defineProps({
 const { showToast } = useToast()
 
 const handleProjectClick = () => {
-  showToast('Project link redirecting to GitHub...')
+  showToast('Redirecting to GitHub repository...')
 }
+
+// Import all images from assets/images folder
+const imageModules = import.meta.glob('@/assets/images/*', { eager: true })
+
+const projectImage = computed(() => {
+  // Extract filename from the path (e.g., '@/assets/images/QuranEcho.png' -> 'QuranEcho.png')
+  const filename = props.project.image?.split('/').pop()
+  const key = `/src/assets/images/${filename}`
+  return imageModules[key]?.default || props.project.image
+})
 </script>
 
 <template>
   <article class="project-card fade-in-section">
     <div class="project-img-wrapper">
-      <img
-        :src="`https://picsum.photos/seed/${project.seed}/600/400`"
-        :alt="project.title"
-        class="project-img"
-      />
+      <img :src="projectImage" :alt="project.title" class="project-img" />
     </div>
     <div class="project-content">
       <div class="project-type">{{ project.type }}</div>
@@ -33,9 +40,19 @@ const handleProjectClick = () => {
           {{ stackItem }}
         </span>
       </div>
-      <a href="#" class="project-link" @click.prevent="handleProjectClick">
+      <a
+        :href="project.repoUrl"
+        target="_blank"
+        rel="noopener"
+        class="project-link"
+        @click="handleProjectClick"
+      >
         <i class="fab fa-github"></i> View Repository
       </a>
     </div>
   </article>
 </template>
+
+<style scoped>
+/* ...existing code... */
+</style>

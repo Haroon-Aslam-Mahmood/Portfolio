@@ -33,32 +33,36 @@ export const skillCategories = [
 
 export const projects = [
   {
-    seed: 'quran',
+    image: '@/assets/images/QuranEcho.png',
     title: 'Quran Echo',
     type: 'Full Stack Application',
     desc: 'An AI-powered application that analyzes Quran recitation and provides feedback. Final Year Project.',
     stack: ['Flutter', 'Express', 'Node', 'AWS'],
+    repoUrl: 'https://github.com/smuzair7/QuranEcho',
   },
   {
-    seed: 'ecom',
+    image: '@/assets/images/SeasonsFabrics.png',
     title: 'E-Commerce Store',
     type: 'Frontend Application',
     desc: 'Frontend implementation of an e-commerce platform featuring a modern UI, product filtering, and efficient state management.',
     stack: ['React.js', 'JavaScript', 'CSS'],
+    repoUrl: 'https://github.com/Haroon-Aslam-Mahmood/E-commerce-frontend-',
   },
   {
-    seed: 'api',
+    image: '@/assets/images/SeasonsFabrics.png',
     title: 'E-Commerce API',
     type: 'Backend Application',
     desc: 'Robust backend services for an e-commerce platform including secure authentication, payment integration, and RESTful APIs.',
     stack: ['Node.js', 'Express.js', 'MongoDB'],
+    repoUrl: 'https://github.com/Haroon-Aslam-Mahmood/E-commerce-backend-',
   },
   {
-    seed: 'algo',
+    image: '@/assets/images/GeneticAlgorithm.png',
     title: 'Clashless Timetable',
     type: 'Algorithmic Project',
     desc: 'An automated timetable generation system utilizing a genetic algorithm to efficiently avoid scheduling clashes.',
     stack: ['Python', 'Algorithms'],
+    repoUrl: 'https://github.com/Haroon-Aslam-Mahmood/Rock-Paper-Scissor-Game',
   },
 ]
 
@@ -67,12 +71,13 @@ export const contacts = [
     icon: 'fas fa-envelope',
     title: 'Email',
     value: 'haroonaslammahmood@gmail.com',
-    href: 'mailto:haroonaslammahmood@gmail.com',
+    href: 'https://mail.google.com/mail/?view=cm&to=haroonaslammahmood@gmail.com',
   },
   {
     icon: 'fab fa-whatsapp',
     title: 'WhatsApp',
     value: '+92 336 5555193',
+    href: 'https://wa.me/923365555193',
   },
   {
     icon: 'fas fa-map-marker-alt',

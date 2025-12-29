@@ -17,13 +17,15 @@ const { downloadResume } = useResumeDownload()
       <div class="contact-cards">
         <div v-for="contact in contacts" :key="contact.title" class="contact-card">
           <i :class="`${contact.icon} contact-icon`"></i>
-          <h4>{{ contact.title }}</h4>
           <template v-if="contact.href">
-            <a :href="contact.href">{{ contact.value }}</a>
+            <a :href="contact.href" target="_blank" rel="noopener" class="contact-heading-link">
+              <h4>{{ contact.title }}</h4>
+            </a>
           </template>
           <template v-else>
-            <span>{{ contact.value }}</span>
+            <h4>{{ contact.title }}</h4>
           </template>
+          <span>{{ contact.value }}</span>
         </div>
       </div>
 
@@ -33,3 +35,19 @@ const { downloadResume } = useResumeDownload()
     </div>
   </section>
 </template>
+
+<style scoped>
+.contact-heading-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-heading-link h4 {
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.contact-heading-link:hover h4 {
+  color: var(--accent-color);
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
+}
+</style>
