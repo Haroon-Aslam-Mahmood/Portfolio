@@ -27,7 +27,7 @@ export const skillCategories = [
   },
   {
     title: 'Additional Experience',
-    tags: ['AWS', 'Docker', 'Flutter', 'SQL', 'Python', 'Git & GitHub', 'Linux', 'Vue.js'],
+    tags: ['FlutterFlow', 'AWS', 'Docker', 'Flutter', 'SQL', 'Python', 'Git & GitHub', 'Linux', 'Vue.js'],
   },
 ]
 
